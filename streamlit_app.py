@@ -54,6 +54,7 @@ st.write(df['A'] / value)
 st.header("You have made it to the end! Click here to celebrate!")
 
 def celeb():
+  st.success("You did it!")
   st.balloons()
 
 st.button(label="Activate celebration!", on_click=celeb)
