@@ -1,3 +1,4 @@
+from cProfile import label
 import pandas as pd
 import streamlit as st
 
@@ -15,6 +16,10 @@ df = pd.DataFrame({
     })
 
 st.write(df)
+
+st.markdown("Let's take a look at a scatter plot using this DF:")
+
+st.line_chart(df)
 
 st.markdown('First we can use common aritmethic operators between columns:')
 
@@ -45,3 +50,10 @@ st.write(df['A'] * value)
 
 st.code("df['A'] / {}".format(value))
 st.write(df['A'] / value)
+
+st.header("You have made it to the end! Click here to celebrate!")
+
+def celeb():
+  st.balloons()
+
+st.button(label="Activate celebration!", on_click=celeb)
