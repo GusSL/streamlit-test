@@ -19,7 +19,7 @@ st.write(df)
 
 st.markdown("Let's take a look at a line plot using this DF:")
 
-st.line_chart(x=df['A'], y=df['B'])
+st.line_chart(df)
 
 st.markdown('First we can use common aritmethic operators between columns:')
 
